@@ -15,6 +15,13 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Current Drawing Element: " />
+
+        <TextView
+            android:id="@+id/tvCurrentElement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:text="None Selected" />
     </LinearLayout>
 
     <LinearLayout
@@ -90,7 +97,7 @@
 
     </LinearLayout>
 
-    <edu.up.ou_megan_custom_coloring.SolarSystemCanvas
+    <edu.up.ou_megan_hw_1_custom_coloring.SolarSystemCanvas
         android:id="@+id/surfaceView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

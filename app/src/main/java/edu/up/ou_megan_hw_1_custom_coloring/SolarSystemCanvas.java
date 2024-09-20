@@ -1,8 +1,8 @@
 /**
- * Author: Megan Ou
- * Date: 09/22/24
+ * @Author: Megan Ou
+ * @Date: 09/22/24
  */
-package edu.up.ou_megan_hw_1;
+package edu.up.ou_megan_hw_1_custom_coloring;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -11,6 +11,8 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.SurfaceView;
+
+import edu.up.myapplication.R;
 
 public class SolarSystemCanvas extends SurfaceView {
 

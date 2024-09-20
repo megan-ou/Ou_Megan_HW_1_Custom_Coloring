@@ -1,4 +1,4 @@
-package edu.up.myapplication;
+package edu.up.ou_megan_hw_1_custom_coloring;
 
 import org.junit.Test;
 
