@@ -37,6 +37,13 @@ public class SolarSystemCanvas extends SurfaceView {
         //make surface view visible
         setWillNotDraw(false);
 
+        /**
+         * External Citation:
+         * Problem: How to create a new paint in Android Studio
+         * Source: Nuxoll LizardCanvas.java from class lecture
+         * Solution: Use setColor and setStyle methods
+         */
+
         //initialize all colors
         sunPaint = new Paint();
         sunPaint.setColor(0xFFebbd34);
@@ -77,6 +84,13 @@ public class SolarSystemCanvas extends SurfaceView {
         jupiterEyePaint = new Paint();
         jupiterEyePaint.setColor(0xFF8f3c29);
         jupiterEyePaint.setStyle(Paint.Style.FILL);
+
+        /**
+         * External Citation
+         * Problem: How to load images into a surface view
+         * Source: Nuxoll LizardCanvas.java from class lecture
+         * Solution: Create a Bitmap
+         */
 
         //initialize and resize all bitmaps
         astronautBmp = BitmapFactory.decodeResource(getResources(), R.drawable.astronaut);
