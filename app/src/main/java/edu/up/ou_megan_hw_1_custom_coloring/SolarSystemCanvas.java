@@ -87,7 +87,7 @@ public class SolarSystemCanvas extends SurfaceView {
 
         /**
          * External Citation
-         * Problem: How to load images into a surface view
+         * Problem: How to load and scale images into a surface view
          * Source: Nuxoll LizardCanvas.java from class lecture
          * Solution: Create a Bitmap
          */
