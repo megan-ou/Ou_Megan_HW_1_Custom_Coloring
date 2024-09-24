@@ -5,6 +5,7 @@
 package edu.up.ou_megan_hw_1_custom_coloring;
 
 import android.os.Bundle;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +25,19 @@ public class MainActivity extends AppCompatActivity {
         TextView tvGreenVal = findViewById(R.id.tvSbGreen);
         TextView tvBlueVal = findViewById(R.id.tvBlueVal);
 
+        SeekBar sbRed = findViewById(R.id.sbRed);
+        SeekBar sbGreen = findViewById(R.id.sbGreen);
+        SeekBar sbBlue = findViewById(R.id.sbBlue);
 
+        SolarSystemCanvas sSC = findViewById(R.id.solarSystemCanvas);
+
+        //create instance of controller class
+        SolarSystemController controller = new SolarSystemController(tvRedVal, tvGreenVal, tvBlueVal,
+                sbRed, sbGreen, sbBlue, sSC);
+
+        //assign listener to objects
+        sbRed.setOnSeekBarChangeListener(controller);
+        sbGreen.setOnSeekBarChangeListener(controller);
+        sbBlue.setOnSeekBarChangeListener(controller);
     }
 }

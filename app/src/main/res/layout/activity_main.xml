@@ -98,7 +98,7 @@
     </LinearLayout>
 
     <edu.up.ou_megan_hw_1_custom_coloring.SolarSystemCanvas
-        android:id="@+id/surfaceView"
+        android:id="@+id/solarSystemCanvas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>
