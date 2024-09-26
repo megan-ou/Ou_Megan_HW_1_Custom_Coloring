@@ -1,5 +1,6 @@
 /**
  * @author Megan Ou
+ * @date 09/26/24
  */
 package edu.up.ou_megan_hw_1_custom_coloring;
 

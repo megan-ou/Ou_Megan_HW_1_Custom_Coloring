@@ -1,6 +1,6 @@
 /**
  * @Author: Megan Ou
- * @Date: 09/22/24
+ * @Date: 09/26/24
  */
 package edu.up.ou_megan_hw_1_custom_coloring;
 
@@ -183,6 +183,9 @@ public class SolarSystemCanvas extends SurfaceView {
         canvas.drawBitmap(ufoBmp,400,900, sunPaint);
     }
 
+    /**
+     * Getter method that returns ArrayList for allPlanets created
+     */
     public ArrayList<PlanetElement> getAllPlanets() {
         return allPlanets;
     }

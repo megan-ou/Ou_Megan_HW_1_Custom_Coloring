@@ -1,5 +1,6 @@
 /**
  * @author Megan Ou
+ * @date 09/26/24
  */
 package edu.up.ou_megan_hw_1_custom_coloring;
 
@@ -68,7 +69,7 @@ public class PlanetElement {
      * External Citation
      * Date: 09/24/24
      * Problem: How to take square root of numbers
-     * Solution: Use Math.sqrt
+     * Solution: Use Math.sqrt()
      * Source: CustomCircle.java provided by Nuxoll on CS301 Moodle
      */
     public boolean inElement (float xVal, float yVal, float currPlanetRadius) {
