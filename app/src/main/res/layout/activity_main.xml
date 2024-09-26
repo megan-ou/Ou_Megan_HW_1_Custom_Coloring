@@ -14,14 +14,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Current Drawing Element: " />
+            android:text="Current Drawing Element: "
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tvCurrentElement"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="10"
-            android:text="None Selected" />
+            android:text="None Selected"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -34,14 +36,16 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="0"
-            android:text="Red: " />
+            android:text="Red: "
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tvRedVal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="0" />
+            android:text="0"
+            android:textSize="20sp" />
 
         <SeekBar
             android:id="@+id/sbRed"
@@ -55,14 +59,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="Green: " />
+            android:text="Green: "
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tvGreenVal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="0" />
+            android:text="0"
+            android:textSize="20sp" />
 
         <SeekBar
             android:id="@+id/sbGreen"
@@ -76,14 +82,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="Blue: " />
+            android:text="Blue: "
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/tvBlueVal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="0" />
+            android:text="0"
+            android:textSize="20sp" />
 
         <SeekBar
             android:id="@+id/sbBlue"

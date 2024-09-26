@@ -146,7 +146,7 @@ public class SolarSystemCanvas extends SurfaceView {
         PlanetElement venus = new PlanetElement("Venus",(float)453,(float)500,(float)30,venusPaint);
         allPlanets.add(venus);
 
-        PlanetElement earth = new PlanetElement("Earth",(float)510,(float)550,(float)30,earthPaint);
+        PlanetElement earth = new PlanetElement("Earth",(float)515,(float)550,(float)30,earthPaint);
         allPlanets.add(earth);
 
         PlanetElement mars = new PlanetElement("Mars",(float)605,(float)540,(float)20,marsPaint);
@@ -181,5 +181,9 @@ public class SolarSystemCanvas extends SurfaceView {
         canvas.drawBitmap(astronautBmp, 1700, 65, sunPaint);
 
         canvas.drawBitmap(ufoBmp,400,900, sunPaint);
+    }
+
+    public ArrayList<PlanetElement> getAllPlanets() {
+        return allPlanets;
     }
 }

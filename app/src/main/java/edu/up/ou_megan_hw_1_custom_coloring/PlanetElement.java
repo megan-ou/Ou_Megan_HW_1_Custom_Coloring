@@ -12,8 +12,6 @@ public class PlanetElement {
     private float planetY;
     private float planetRadius;
     private Paint planetColor;
-    private PlanetElement selectedPlanet;
-
 
     public PlanetElement(String initName, Float initX, Float initY, Float initRadius, Paint initPaint) {
         planetName = initName;
@@ -21,8 +19,6 @@ public class PlanetElement {
         planetY = initY;
         planetRadius = initRadius;
         planetColor = initPaint;
-
-        selectedPlanet = null;
     }
 
     /**
@@ -31,6 +27,27 @@ public class PlanetElement {
      */
     public String getPlanetName() {
         return this.planetName;
+    }
+
+    /**
+     * Getter method for current planet radius
+     */
+    public float getPlanetRadius () {
+        return this.planetRadius;
+    }
+
+    /**
+     * Getter method for current planet paint
+     */
+    public Paint getPlanetColor() {
+        return this.planetColor;
+    }
+
+    /**
+     * Setter method for current planet paint
+     */
+    public void setPlanetColor(int newColor) {
+        planetColor.setColor(newColor);
     }
 
     /**
@@ -54,18 +71,16 @@ public class PlanetElement {
      * Solution: Use Math.sqrt
      * Source: CustomCircle.java provided by Nuxoll on CS301 Moodle
      */
-    public boolean inElement (float xVal, float yVal) {
+    public boolean inElement (float xVal, float yVal, float currPlanetRadius) {
         float distanceSq = ((xVal - planetX) * (xVal - planetX)) +
                 ((yVal - planetY) * (yVal - planetY));
         double distance = Math.sqrt(distanceSq);
 
-        if (distance <= planetRadius) {
-            selectedPlanet = this;
+        if (distance <= currPlanetRadius) {
             return true;
         }
 
         else {
-            selectedPlanet = null;
             return false;
         }
     }
