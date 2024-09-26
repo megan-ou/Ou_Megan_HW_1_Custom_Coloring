@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Ou_Megan_HW_1_Custom_Coloring"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name="edu.up.ou_megan_hw_1_custom_coloring.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

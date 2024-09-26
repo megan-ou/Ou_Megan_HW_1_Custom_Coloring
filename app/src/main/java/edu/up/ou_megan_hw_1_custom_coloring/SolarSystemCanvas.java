@@ -12,6 +12,8 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.SurfaceView;
 
+import java.util.ArrayList;
+
 import edu.up.myapplication.R;
 
 public class SolarSystemCanvas extends SurfaceView {
@@ -30,6 +32,15 @@ public class SolarSystemCanvas extends SurfaceView {
     private Bitmap ufoBmp;
     private Bitmap satRingBmp;
     private Bitmap neptRingBmp;
+
+    /**
+     * External Citation:
+     * Date: 09/25/24
+     * Problem: How can I indentify which planet was selected?
+     * Solution: Create an arraylist of elements that you can iterate through
+     * Source: Nuxoll office hours
+     */
+    private ArrayList<PlanetElement> allPlanets = new ArrayList<>();
 
     public SolarSystemCanvas(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -114,53 +125,61 @@ public class SolarSystemCanvas extends SurfaceView {
      *
      * Outside image used for UFO
      * Source: https://pngtree.com/freepng/element-colorful-ufo-illustration_4088803.html?sce=sol_pin
+     *
+     * External Citation 09/24/24
+     * Problem: Wanted to make each editable element an object
+     * Source: Spot.java from class lecture written by Nuxoll
+     * Solution: Create an element class and create instances of class
      */
 
     @Override
     protected void onDraw(Canvas canvas) {
         setBackgroundColor(0xFF181924);
 
-        //draw Sun - EDITABLE ELEMENT
-        canvas.drawCircle(-400,550,700, sunPaint);
+        //create all Planet Elements and add them to ArrayList
+        PlanetElement sun = new PlanetElement("Sun",(float)-400,(float)550,(float)700, sunPaint);
+        allPlanets.add(sun);
 
-        //draw Mercury - EDITABLE ELEMENT
-        canvas.drawCircle(355,545,20, mercuryPaint);
+        PlanetElement mercury = new PlanetElement("Mercury",(float)355,(float)545,(float)20,mercuryPaint);
+        allPlanets.add(mercury);
 
-        //draw Venus - EDITABLE ELEMENT
-        canvas.drawCircle(435,500,30, venusPaint);
+        PlanetElement venus = new PlanetElement("Venus",(float)453,(float)500,(float)30,venusPaint);
+        allPlanets.add(venus);
 
-        //draw Earth - EDITABLE ELEMENT
-        canvas.drawCircle(510, 550, 30, earthPaint);
+        PlanetElement earth = new PlanetElement("Earth",(float)510,(float)550,(float)30,earthPaint);
+        allPlanets.add(earth);
 
-        //draw Mars - EDITABLE ELEMENT
-        canvas.drawCircle(605,540, 20, marsPaint);
+        PlanetElement mars = new PlanetElement("Mars",(float)605,(float)540,(float)20,marsPaint);
+        allPlanets.add(mars);
 
-        //draw Jupiter - EDITABLE ELEMENT
-        canvas.drawCircle(900,570, 175, jupiterPaint);
+        PlanetElement jupiter = new PlanetElement("Jupiter",(float)900,(float)570,(float)175,jupiterPaint);
+        allPlanets.add(jupiter);
 
-        //draw Jupiter's Eye - STATIC ELEMENT
+        PlanetElement saturn = new PlanetElement("Saturn",(float)1350,(float)590,(float)150,saturnPaint);
+        allPlanets.add(saturn);
+
+        PlanetElement uranus = new PlanetElement("Uranus",(float)1700,(float)540,(float)65,uranusPaint);
+        allPlanets.add(uranus);
+
+        PlanetElement neptune = new PlanetElement("Neptune",(float)1900,(float)570,(float)60,neptunePaint);
+        allPlanets.add(neptune);
+
+        //draw all PlanetElements
+        for(int i = 0; i < allPlanets.size(); i++) {
+            allPlanets.get(i).draw(canvas);
+        }
+
+        //draw all bitMap/non editable/static elements
+        //paint is just a placeholder to fulfill parameter requirement
+
         canvas.drawOval(980,600,1040,630, jupiterEyePaint);
 
-        //draw Saturn - EDITABLE ELEMENT
-        canvas.drawCircle(1350,590, 150, saturnPaint);
-
-        //draw Saturn's Rings - STATIC ELEMENT
         canvas.drawBitmap(satRingBmp,890,50,sunPaint);
 
-        //draw Uranus - EDITABLE ELEMENT
-        canvas.drawCircle(1700, 540, 65, uranusPaint);
-
-        //draw Neptune - EDITABLE ELEMENT
-        canvas.drawCircle(1900, 570, 60, neptunePaint);
-
-        //draw Neptune's Ring - STATIC ELEMENT
         canvas.drawBitmap(neptRingBmp, 1760,410, sunPaint);
 
-        //draw astronaut - STATIC ELEMENT
-        //paint is just a placeholder to fulfill parameter requirement
         canvas.drawBitmap(astronautBmp, 1700, 65, sunPaint);
 
-        //draw UFO - STATIC ELEMENT
         canvas.drawBitmap(ufoBmp,400,900, sunPaint);
     }
 }
