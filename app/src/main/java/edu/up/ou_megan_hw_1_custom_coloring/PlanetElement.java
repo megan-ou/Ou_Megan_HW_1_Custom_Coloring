@@ -1,8 +1,14 @@
+package edu.up.ou_megan_hw_1_custom_coloring;
+
 /**
+ * PlanetElement class is basic framework for a planet object that takes a name, x, y coordinate,
+ * radius, and paint element as parameters to make a planet
+ *
+ * Includes helper method to calculate the area of a planet element for the controller class
+ *
  * @author Megan Ou
  * @date 09/26/24
  */
-package edu.up.ou_megan_hw_1_custom_coloring;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -56,6 +62,8 @@ public class PlanetElement {
      * Date: 09/24/24
      * Problem: How to create draw method to draw a generic planet
      * Solution: Use structure from Spot.java written by Nuxoll in CS301 lecture
+     *
+     * Draws a planet on a canvas
      */
 
     public void draw(Canvas canvas) {

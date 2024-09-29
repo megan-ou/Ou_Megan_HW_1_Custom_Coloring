@@ -1,8 +1,11 @@
+package edu.up.ou_megan_hw_1_custom_coloring;
+
 /**
+ * Calls canvas and controller class to draw an image of a solar system
+ *
  * @Author: Megan Ou
  * @Date: 09/26/24
  */
-package edu.up.ou_megan_hw_1_custom_coloring;
 
 import android.os.Bundle;
 import android.widget.SeekBar;

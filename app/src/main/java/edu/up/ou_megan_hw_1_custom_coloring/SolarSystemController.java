@@ -1,8 +1,12 @@
+package edu.up.ou_megan_hw_1_custom_coloring;
+
 /**
+ * Controller class that handles touch and seekbar events. Used to change textViews, set
+ * seekbar progress and update color components of PlanetElements drawn on the canvas.
+ *
  * @author Megan Ou
  * @date 09/26/24
  */
-package edu.up.ou_megan_hw_1_custom_coloring;
 
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -56,6 +60,14 @@ public class SolarSystemController implements SeekBar.OnSeekBarChangeListener, V
         allPlanets = sSCanvas.getAllPlanets();
     }
 
+    /**
+     * Method that tracks changes to seekBar and updates a textView with the value
+     * Also used to update paint component if a planet is selected.
+     *
+     * @param seekBar what seekbar is being edited
+     * @param sbVal current value/progress change of seekBar
+     * @param b unused
+     */
     @Override
     public void onProgressChanged(SeekBar seekBar, int sbVal, boolean b) {
         //update textview with RGB values
@@ -96,12 +108,15 @@ public class SolarSystemController implements SeekBar.OnSeekBarChangeListener, V
         sSCanvas.invalidate();
     }
 
-    @Override
-    public void onStartTrackingTouch(SeekBar seekBar) { }
-
-    @Override
-    public void onStopTrackingTouch(SeekBar seekBar) { }
-
+    /**
+     * Method that identifies if a touch event occurs within the area of a planet element
+     * If planet was selected, it updates the seekBars to display current planet RGB value
+     * and a TextView with planet name
+     *
+     * @param view unused
+     * @param motionEvent what was touched on the screen
+     * @return true
+     */
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
         xVal = motionEvent.getX();
@@ -147,4 +162,13 @@ public class SolarSystemController implements SeekBar.OnSeekBarChangeListener, V
         bValInt = Color.blue(currPaintInt);
     }
 
+    //empty class
+    @Override
+    public void onStartTrackingTouch(SeekBar seekBar) { }
+
+    //empty class
+    @Override
+    public void onStopTrackingTouch(SeekBar seekBar) { }
+
 }
+

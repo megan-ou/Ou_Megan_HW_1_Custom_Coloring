@@ -1,8 +1,12 @@
+package edu.up.ou_megan_hw_1_custom_coloring;
+
 /**
+ * Canvas class that calls the PlanetElement class to create planet objects, place them in
+ * an array, and draw the elements on a canvas.
+ *
  * @Author: Megan Ou
  * @Date: 09/26/24
  */
-package edu.up.ou_megan_hw_1_custom_coloring;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -36,12 +40,15 @@ public class SolarSystemCanvas extends SurfaceView {
     /**
      * External Citation:
      * Date: 09/25/24
-     * Problem: How can I indentify which planet was selected?
+     * Problem: How can I identify which planet was selected?
      * Solution: Create an arraylist of elements that you can iterate through
      * Source: Nuxoll office hours
      */
     private ArrayList<PlanetElement> allPlanets = new ArrayList<>();
 
+    /**
+     * Constructor
+     */
     public SolarSystemCanvas(Context context, AttributeSet attrs) {
         super(context, attrs);
 
@@ -130,6 +137,8 @@ public class SolarSystemCanvas extends SurfaceView {
      * Problem: Wanted to make each editable element an object
      * Source: Spot.java from class lecture written by Nuxoll
      * Solution: Create an element class and create instances of class
+     *
+     * onDraw Class creates and draws planet element objects. Also draws bitmap static images.
      */
 
     @Override
@@ -164,7 +173,7 @@ public class SolarSystemCanvas extends SurfaceView {
         PlanetElement neptune = new PlanetElement("Neptune",(float)1900,(float)570,(float)60,neptunePaint);
         allPlanets.add(neptune);
 
-        //draw all PlanetElements
+        //draw all PlanetElements in array list
         for(int i = 0; i < allPlanets.size(); i++) {
             allPlanets.get(i).draw(canvas);
         }
